@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UMo-fu-8uC">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List Cred Cards View Controller-->
+        <scene sceneID="Wy8-HK-zFJ">
+            <objects>
+                <viewController storyboardIdentifier="ListCredCardsViewController" id="UMo-fu-8uC" customClass="ListCredCardsViewController" customModule="Pan_CredCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CLr-BC-0UL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="KCq-Mb-B6D">
+                                <rect key="frame" x="0.0" y="20" width="320" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3V5-S7-c6F">
+                                <rect key="frame" x="0.0" y="76" width="320" height="492"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C1l-Xd-0Ck"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3V5-S7-c6F" firstAttribute="top" secondItem="KCq-Mb-B6D" secondAttribute="bottom" id="06h-RM-WXW"/>
+                            <constraint firstItem="3V5-S7-c6F" firstAttribute="trailing" secondItem="C1l-Xd-0Ck" secondAttribute="trailing" id="G4X-F5-7r2"/>
+                            <constraint firstItem="3V5-S7-c6F" firstAttribute="bottom" secondItem="C1l-Xd-0Ck" secondAttribute="bottom" id="XJB-cZ-EeP"/>
+                            <constraint firstItem="KCq-Mb-B6D" firstAttribute="trailing" secondItem="C1l-Xd-0Ck" secondAttribute="trailing" id="bMB-Ih-jCX"/>
+                            <constraint firstItem="KCq-Mb-B6D" firstAttribute="leading" secondItem="C1l-Xd-0Ck" secondAttribute="leading" id="ghn-QS-rhs"/>
+                            <constraint firstItem="KCq-Mb-B6D" firstAttribute="top" secondItem="C1l-Xd-0Ck" secondAttribute="top" id="lbc-ho-lSe"/>
+                            <constraint firstItem="3V5-S7-c6F" firstAttribute="leading" secondItem="C1l-Xd-0Ck" secondAttribute="leading" id="otq-pH-Mpx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="listCredCardsTableView" destination="3V5-S7-c6F" id="DkN-56-wH8"/>
+                        <outlet property="searchCardSearchBar" destination="KCq-Mb-B6D" id="IPC-A1-GMt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vEK-0U-GZx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-875.625" y="-68.661971830985919"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
