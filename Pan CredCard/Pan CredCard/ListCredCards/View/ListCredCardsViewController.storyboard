@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UMo-fu-8uC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UMo-fu-8uC">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,27 +17,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="KCq-Mb-B6D">
-                                <rect key="frame" x="0.0" y="20" width="320" height="56"/>
+                                <rect key="frame" x="0.0" y="62" width="320" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3V5-S7-c6F">
-                                <rect key="frame" x="0.0" y="76" width="320" height="492"/>
+                                <rect key="frame" x="0.0" y="118" width="320" height="450"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v61-zX-m9z">
+                                <rect key="frame" x="100" y="25" width="120" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="contactUsTappedButton:" destination="UMo-fu-8uC" eventType="touchUpInside" id="uAj-kd-pDL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="C1l-Xd-0Ck"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3V5-S7-c6F" firstAttribute="top" secondItem="KCq-Mb-B6D" secondAttribute="bottom" id="06h-RM-WXW"/>
+                            <constraint firstItem="v61-zX-m9z" firstAttribute="top" secondItem="C1l-Xd-0Ck" secondAttribute="top" constant="5" id="29h-5k-u1J"/>
                             <constraint firstItem="3V5-S7-c6F" firstAttribute="trailing" secondItem="C1l-Xd-0Ck" secondAttribute="trailing" id="G4X-F5-7r2"/>
                             <constraint firstItem="3V5-S7-c6F" firstAttribute="bottom" secondItem="C1l-Xd-0Ck" secondAttribute="bottom" id="XJB-cZ-EeP"/>
                             <constraint firstItem="KCq-Mb-B6D" firstAttribute="trailing" secondItem="C1l-Xd-0Ck" secondAttribute="trailing" id="bMB-Ih-jCX"/>
                             <constraint firstItem="KCq-Mb-B6D" firstAttribute="leading" secondItem="C1l-Xd-0Ck" secondAttribute="leading" id="ghn-QS-rhs"/>
-                            <constraint firstItem="KCq-Mb-B6D" firstAttribute="top" secondItem="C1l-Xd-0Ck" secondAttribute="top" id="lbc-ho-lSe"/>
+                            <constraint firstItem="C1l-Xd-0Ck" firstAttribute="trailing" secondItem="v61-zX-m9z" secondAttribute="trailing" constant="100" id="jAt-PL-Egv"/>
+                            <constraint firstItem="v61-zX-m9z" firstAttribute="leading" secondItem="C1l-Xd-0Ck" secondAttribute="leading" constant="100" id="m1c-Ch-AWa"/>
+                            <constraint firstItem="3V5-S7-c6F" firstAttribute="top" secondItem="KCq-Mb-B6D" secondAttribute="bottom" id="nvl-WX-mcx"/>
+                            <constraint firstItem="KCq-Mb-B6D" firstAttribute="top" secondItem="v61-zX-m9z" secondAttribute="bottom" constant="2" id="oSo-Le-rjU"/>
                             <constraint firstItem="3V5-S7-c6F" firstAttribute="leading" secondItem="C1l-Xd-0Ck" secondAttribute="leading" id="otq-pH-Mpx"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contactUsChangeButton" destination="v61-zX-m9z" id="d97-8v-cKq"/>
                         <outlet property="listCredCardsTableView" destination="3V5-S7-c6F" id="DkN-56-wH8"/>
                         <outlet property="searchCardSearchBar" destination="KCq-Mb-B6D" id="IPC-A1-GMt"/>
                     </connections>

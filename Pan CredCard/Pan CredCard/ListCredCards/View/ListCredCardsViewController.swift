@@ -8,7 +8,7 @@ import UIKit
 
 class ListCredCardsViewController: UIViewController {
     
-    
+    @IBOutlet weak var contactUsChangeButton: UIButton!
     @IBOutlet weak var searchCardSearchBar: UISearchBar!
     @IBOutlet weak var listCredCardsTableView: UITableView!
     
@@ -39,6 +39,20 @@ class ListCredCardsViewController: UIViewController {
         super.viewDidAppear(animated)
         fadeInListCredCards()
         
+    }
+    
+    @IBAction func contactUsTappedButton(_ sender: UIButton) {
+        navigateToContactUs()
+    }
+    
+    private func navigateToContactUs(_ sender: UIButton) {
+        
+        let podBundle = Bundle(for: FaleConosco.ContactUsViewController.self)
+        let storyboard = UIStoryboard(name: "ContactUsViewController", bundle: podBundle)
+        guard let contactUsViewController = storyboard.instantiateViewController(withIdentifier: "ContactUsViewController") as? SeuPod.ContactUsViewController else {
+            fatalError("Erro ao instanciar ContactUsViewController do storyboard.")
+        }
+        navigationController?.pushViewController(contactUsViewController, animated: true)
     }
     
     private func fadeInListCredCards() {
