@@ -5,6 +5,7 @@
 //  Created by Michael Bressiani on 20/01/24.
 
 import UIKit
+import FaleConosco
 
 class ListCredCardsViewController: UIViewController {
     
@@ -45,11 +46,11 @@ class ListCredCardsViewController: UIViewController {
         navigateToContactUs()
     }
     
-    private func navigateToContactUs(_ sender: UIButton) {
+    private func navigateToContactUs() {
         
         let podBundle = Bundle(for: FaleConosco.ContactUsViewController.self)
         let storyboard = UIStoryboard(name: "ContactUsViewController", bundle: podBundle)
-        guard let contactUsViewController = storyboard.instantiateViewController(withIdentifier: "ContactUsViewController") as? SeuPod.ContactUsViewController else {
+        guard let contactUsViewController = storyboard.instantiateViewController(withIdentifier: "ContactUsViewController") as? FaleConosco.ContactUsViewController else {
             fatalError("Erro ao instanciar ContactUsViewController do storyboard.")
         }
         navigationController?.pushViewController(contactUsViewController, animated: true)

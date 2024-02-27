@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF01B9CC2B8D747E0040F398 /* FaleConosco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF01B9C82B8D74170040F398 /* FaleConosco.framework */; };
+		DF01B9CD2B8D747E0040F398 /* FaleConosco.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF01B9C82B8D74170040F398 /* FaleConosco.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DF01B9CF2B8D74840040F398 /* FaleConoscoTests.xctest in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = DF01B9CA2B8D74170040F398 /* FaleConoscoTests.xctest */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DF0B58282B74DE83002DEF8F /* LoadingAPIRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B58272B74DE83002DEF8F /* LoadingAPIRequestViewController.swift */; };
 		DF0B582A2B74DE90002DEF8F /* LoadingAPIRequestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF0B58292B74DE90002DEF8F /* LoadingAPIRequestViewController.storyboard */; };
 		DF0B582E2B74E971002DEF8F /* LoadingAnimationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B582D2B74E971002DEF8F /* LoadingAnimationViewModel.swift */; };
@@ -35,6 +38,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DF01B9C72B8D74170040F398 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF01B9C22B8D74170040F398 /* FaleConosco.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DF05F4E42B8D35BE00A8C677;
+			remoteInfo = FaleConosco;
+		};
+		DF01B9C92B8D74170040F398 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF01B9C22B8D74170040F398 /* FaleConosco.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DF05F4EC2B8D35BF00A8C677;
+			remoteInfo = FaleConoscoTests;
+		};
 		DF1BF6152B65A77C00C38CB5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DF4AE43A2B5C2C8E00C7D7C0 /* Project object */;
@@ -44,18 +61,44 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DF01B9CE2B8D747E0040F398 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DF01B9CD2B8D747E0040F398 /* FaleConosco.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF01B9D02B8D74840040F398 /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DF01B9CF2B8D74840040F398 /* FaleConoscoTests.xctest in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DF01B9C22B8D74170040F398 /* FaleConosco.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FaleConosco.xcodeproj; path = "../../../pod-fale-conosco/FaleConosco/FaleConosco.xcodeproj"; sourceTree = "<group>"; };
 		DF0B58272B74DE83002DEF8F /* LoadingAPIRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAPIRequestViewController.swift; sourceTree = "<group>"; };
 		DF0B58292B74DE90002DEF8F /* LoadingAPIRequestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingAPIRequestViewController.storyboard; sourceTree = "<group>"; };
 		DF0B582D2B74E971002DEF8F /* LoadingAnimationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimationViewModel.swift; sourceTree = "<group>"; };
 		DF1BF1042B665DF3004436DD /* ListCredCardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCredCardsTests.swift; sourceTree = "<group>"; };
 		DF1BF1072B667087004436DD /* ImageString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageString.swift; sourceTree = "<group>"; };
-		DF1BF6112B65A77C00C38CB5 /* Pan CredCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pan CredCardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF1BF6112B65A77C00C38CB5 /* Pan CredCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Pan CredCardTests.xctest"; path = "/Users/michael.bressiani/badge-profissional/Pan CredCard/build/Debug-iphoneos/Pan CredCardTests.xctest"; sourceTree = "<absolute>"; };
 		DF1BF6132B65A77C00C38CB5 /* Pan_CredCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pan_CredCardTests.swift; sourceTree = "<group>"; };
 		DF2EDA342B5F40DD004AF676 /* SecureStorageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorageCard.swift; sourceTree = "<group>"; };
 		DF3493912B5C53A0004BFD68 /* DetailsCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCardViewController.swift; sourceTree = "<group>"; };
 		DF3493972B5C65C8004BFD68 /* DetailsCardViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsCardViewController.storyboard; sourceTree = "<group>"; };
-		DF4AE4422B5C2C8E00C7D7C0 /* Pan CredCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pan CredCard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF4AE4422B5C2C8E00C7D7C0 /* Pan CredCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Pan CredCard.app"; path = "/Users/michael.bressiani/badge-profissional/Pan CredCard/build/Debug-iphoneos/Pan CredCard.app"; sourceTree = "<absolute>"; };
 		DF4AE4452B5C2C8E00C7D7C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF4AE4472B5C2C8E00C7D7C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DF4AE4492B5C2C8E00C7D7C0 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
@@ -87,12 +130,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF01B9CC2B8D747E0040F398 /* FaleConosco.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF01B9C32B8D74170040F398 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF01B9C82B8D74170040F398 /* FaleConosco.framework */,
+				DF01B9CA2B8D74170040F398 /* FaleConoscoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		DF0B58262B74DE33002DEF8F /* LoadingAPIRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,22 +215,13 @@
 			children = (
 				DF4AE4442B5C2C8E00C7D7C0 /* Pan CredCard */,
 				DF1BF6122B65A77C00C38CB5 /* Pan CredCardTests */,
-				DF4AE4432B5C2C8E00C7D7C0 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		DF4AE4432B5C2C8E00C7D7C0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DF4AE4422B5C2C8E00C7D7C0 /* Pan CredCard.app */,
-				DF1BF6112B65A77C00C38CB5 /* Pan CredCardTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		DF4AE4442B5C2C8E00C7D7C0 /* Pan CredCard */ = {
 			isa = PBXGroup;
 			children = (
+				DF01B9C22B8D74170040F398 /* FaleConosco.xcodeproj */,
 				DF1BF1062B66706F004436DD /* Utils */,
 				DF4AE4742B5C457300C7D7C0 /* Service */,
 				DF4AE46E2B5C446C00C7D7C0 /* Mock */,
@@ -315,6 +359,8 @@
 				DF4AE43E2B5C2C8E00C7D7C0 /* Sources */,
 				DF4AE43F2B5C2C8E00C7D7C0 /* Frameworks */,
 				DF4AE4402B5C2C8E00C7D7C0 /* Resources */,
+				DF01B9CE2B8D747E0040F398 /* Embed Frameworks */,
+				DF01B9D02B8D74840040F398 /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
@@ -357,8 +403,14 @@
 			mainGroup = DF4AE4392B5C2C8E00C7D7C0;
 			packageReferences = (
 			);
-			productRefGroup = DF4AE4432B5C2C8E00C7D7C0 /* Products */;
+			productRefGroup = DF4AE4392B5C2C8E00C7D7C0;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DF01B9C32B8D74170040F398 /* Products */;
+					ProjectRef = DF01B9C22B8D74170040F398 /* FaleConosco.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DF4AE4412B5C2C8E00C7D7C0 /* Pan CredCard */,
@@ -366,6 +418,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DF01B9C82B8D74170040F398 /* FaleConosco.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FaleConosco.framework;
+			remoteRef = DF01B9C72B8D74170040F398 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DF01B9CA2B8D74170040F398 /* FaleConoscoTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FaleConoscoTests.xctest;
+			remoteRef = DF01B9C92B8D74170040F398 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DF1BF60F2B65A77C00C38CB5 /* Resources */ = {
