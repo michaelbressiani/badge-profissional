@@ -31,6 +31,7 @@ class ListCredCardsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialConfigs()
+        configButtonContactUs()
         configSeachBar()
         configTableView()
         accessibilitySearchBar()
@@ -39,7 +40,6 @@ class ListCredCardsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         fadeInListCredCards()
-        
     }
     
     @IBAction func contactUsTappedButton(_ sender: UIButton) {
@@ -47,13 +47,17 @@ class ListCredCardsViewController: UIViewController {
     }
     
     private func navigateToContactUs() {
-        
+    
         let podBundle = Bundle(for: FaleConosco.ContactUsViewController.self)
         let storyboard = UIStoryboard(name: "ContactUsViewController", bundle: podBundle)
         guard let contactUsViewController = storyboard.instantiateViewController(withIdentifier: "ContactUsViewController") as? FaleConosco.ContactUsViewController else {
             fatalError("Erro ao instanciar ContactUsViewController do storyboard.")
         }
-        navigationController?.pushViewController(contactUsViewController, animated: true)
+        fadeOutLisCredtCards()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+            self.navigationController?.pushViewController(contactUsViewController, animated: false)
+        })
     }
     
     private func fadeInListCredCards() {
@@ -63,11 +67,22 @@ class ListCredCardsViewController: UIViewController {
         UISearchBar.animate(withDuration: 2.0) {
             self.searchCardSearchBar.alpha = 1
         }
+        UIButton.animate(withDuration: 2.0) {
+            self.contactUsChangeButton.alpha = 1
+        }
     }
     
     private func initialConfigs() {
         self.navigationItem.hidesBackButton = true
         view.backgroundColor = UIColor.systemBackground
+    }
+    
+    private func configButtonContactUs() {
+        contactUsChangeButton.setTitle(" Fale Conosco", for: .normal)
+        contactUsChangeButton.tintColor = UIColor(red: 0/255.0, green: 176/255.0, blue: 240/255.0, alpha: 1.0)
+        let image = UIImage(systemName: "phone")
+        contactUsChangeButton.setImage(image, for: .normal)
+        self.contactUsChangeButton.alpha = 0
     }
     
     private func configTableView() {
@@ -107,6 +122,9 @@ class ListCredCardsViewController: UIViewController {
         
         UISearchBar.animate(withDuration: 1.0) {
             self.searchCardSearchBar.alpha = 0
+        }
+        UITableView.animate(withDuration: 1.0) {
+            self.contactUsChangeButton.alpha = 0
         }
     }
     

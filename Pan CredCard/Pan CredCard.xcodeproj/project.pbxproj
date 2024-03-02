@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DF01B9CC2B8D747E0040F398 /* FaleConosco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF01B9C82B8D74170040F398 /* FaleConosco.framework */; };
 		DF01B9CD2B8D747E0040F398 /* FaleConosco.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF01B9C82B8D74170040F398 /* FaleConosco.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DF01B9CF2B8D74840040F398 /* FaleConoscoTests.xctest in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = DF01B9CA2B8D74170040F398 /* FaleConoscoTests.xctest */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DF0B58282B74DE83002DEF8F /* LoadingAPIRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B58272B74DE83002DEF8F /* LoadingAPIRequestViewController.swift */; };
 		DF0B582A2B74DE90002DEF8F /* LoadingAPIRequestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF0B58292B74DE90002DEF8F /* LoadingAPIRequestViewController.storyboard */; };
 		DF0B582E2B74E971002DEF8F /* LoadingAnimationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B582D2B74E971002DEF8F /* LoadingAnimationViewModel.swift */; };
@@ -73,17 +72,6 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF01B9D02B8D74840040F398 /* Embed PlugIns */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				DF01B9CF2B8D74840040F398 /* FaleConoscoTests.xctest in Embed PlugIns */,
-			);
-			name = "Embed PlugIns";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -112,10 +100,10 @@
 		DF4AE46C2B5C43DB00C7D7C0 /* ListCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCards.swift; sourceTree = "<group>"; };
 		DF4AE46F2B5C449600C7D7C0 /* Cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cards.json; sourceTree = "<group>"; };
 		DF4AE4752B5C45AB00C7D7C0 /* CardsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsService.swift; sourceTree = "<group>"; };
-		DF4FFCE02B8EA115001DC6CB /* Pan CredCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pan CredCard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF4FFCE12B8EA115001DC6CB /* Pan CredCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pan CredCardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF706F2E2B5E7FD100782671 /* DetailsCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCardViewModel.swift; sourceTree = "<group>"; };
 		DFE8BC6A2B6CFC6A00E19C19 /* DetailsCardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsCardTests.swift; sourceTree = "<group>"; };
+		DFEDE5352B939E25005CDC2B /* Pan CredCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Pan CredCard.app"; path = "/Users/michael.bressiani/badge-profissional/Pan CredCard/build/Debug-iphoneos/Pan CredCard.app"; sourceTree = "<absolute>"; };
+		DFEDE5362B939E25005CDC2B /* Pan CredCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Pan CredCardTests.xctest"; path = "/Users/michael.bressiani/badge-profissional/Pan CredCard/build/Debug-iphoneos/Pan CredCardTests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,8 +203,6 @@
 			children = (
 				DF4AE4442B5C2C8E00C7D7C0 /* Pan CredCard */,
 				DF1BF6122B65A77C00C38CB5 /* Pan CredCardTests */,
-				DF4FFCE02B8EA115001DC6CB /* Pan CredCard.app */,
-				DF4FFCE12B8EA115001DC6CB /* Pan CredCardTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -351,7 +337,7 @@
 			);
 			name = "Pan CredCardTests";
 			productName = "Pan CredCardTests";
-			productReference = DF4FFCE12B8EA115001DC6CB /* Pan CredCardTests.xctest */;
+			productReference = DFEDE5362B939E25005CDC2B /* Pan CredCardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		DF4AE4412B5C2C8E00C7D7C0 /* Pan CredCard */ = {
@@ -362,7 +348,6 @@
 				DF4AE43F2B5C2C8E00C7D7C0 /* Frameworks */,
 				DF4AE4402B5C2C8E00C7D7C0 /* Resources */,
 				DF01B9CE2B8D747E0040F398 /* Embed Frameworks */,
-				DF01B9D02B8D74840040F398 /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
@@ -372,7 +357,7 @@
 			packageProductDependencies = (
 			);
 			productName = "Pan CredCard";
-			productReference = DF4FFCE02B8EA115001DC6CB /* Pan CredCard.app */;
+			productReference = DFEDE5352B939E25005CDC2B /* Pan CredCard.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

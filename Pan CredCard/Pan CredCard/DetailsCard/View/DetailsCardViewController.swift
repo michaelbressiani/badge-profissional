@@ -22,7 +22,6 @@ class DetailsCardViewController: UIViewController {
     @IBOutlet weak var titleCardIsCreditOrIsDebitLabel: UILabel!
     @IBOutlet weak var cardIsCreditOrIsDebitLabel: UILabel!
     
-    
     private var cardName: String = ""
     private var card: Card = Card(id: 0, name: "", alias: "", credit: false, debit: false, number: "", codSec: "", image: "")
     private var viewModel: DetailsCardViewModel = DetailsCardViewModel()
